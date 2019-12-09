@@ -7,9 +7,8 @@
    - httpd
    - git
 
-- name: Copying the index.html page to remote server
-  template: src=index.raw.html dest=/var/www/html/index.html
-  mode: 0644
+- name: Copy the index.html file
+  copy: src=index.raw.html dest=/var/www/html/index.html
 
 - name: Starting and enabling the http service
   service: name=httpd state=started enabled=yes

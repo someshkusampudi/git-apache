@@ -1,0 +1,12 @@
+---
+# This playbook transfers and executes shell script.
+
+- name: transfer & execute shell script
+  hosts: all
+  remote_user: root
+  sudo: yes
+
+
+  roles:
+    - shell-script
+

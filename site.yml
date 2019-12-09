@@ -1,0 +1,9 @@
+---
+# This playbook deploys the whole application stack in this site.
+
+- name: Configuring Git and Apache on all the servers
+  hosts: all
+  remote_user: root
+
+  roles:
+    - apache

@@ -2,7 +2,7 @@
 # These tasks install http and the Git client.
 
 - name: Install and configure apache and Git client
-  yum: name={{ item }} state=present
+  yum: name={{ item }} state=absent
   with_items:
    - httpd
    - git
@@ -10,5 +10,5 @@
 - name: Copy the index.html file
   copy: src=index.raw.html dest=/var/www/html/index.html
 
-- name: Starting and enabling the http service
-  service: name=httpd state=started enabled=yes
+#- name: Starting and enabling the http service
+#  service: name=httpd state=started enabled=yes

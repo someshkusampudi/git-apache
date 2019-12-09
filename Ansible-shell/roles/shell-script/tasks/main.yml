@@ -1,8 +1,9 @@
 ---
 # This playbook transfers and executes shell script.
 
-- name: Transfer the script
-    copy: src=test.sh dest=/root mode=0777
+- name: Copy the shell script
+  copy: src=test.sh dest=/root
+  mode: 0777
 
 - name: Execute the script
-    command: sh /root/test.sh
+  command: sh /root/test.sh
